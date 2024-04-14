@@ -4,22 +4,24 @@ import { FaPhp } from "react-icons/fa";
 import { GrOracle } from "react-icons/gr";
 import { SiApache } from "react-icons/si";
 import { BsArrowRight } from "react-icons/bs";
+import { Link } from 'react-router-dom';
 
-function Card(){
-    return(
+// eslint-disable-next-line react/prop-types
+function Card({name,description,html_url}) {
+    return (
         <section className={styles.card}>
-            <h3>Titulo do projeto</h3>  
-            <p>Texto descritivo do projeto.</p>
+            <h3>{name}</h3>
+            <p>{description}</p>
             <div className={styles.card_footer}>
-               <div className={styles.card_icones}>
-               <FaJava />
-               <FaPhp />
-               <GrOracle />
-               <SiApache/>
-               </div>
-               <button className={styles.botao}>
-               <BsArrowRight />
-               </button>
+                <div className={styles.card_icones}>
+                    <FaJava />
+                    <FaPhp />
+                    <GrOracle />
+                    <SiApache />
+                </div>
+                <Link to={html_url} className={styles.botao}>
+                    <BsArrowRight />
+                </Link>
             </div>
         </section>
     )
