@@ -1,9 +1,10 @@
 import styles from './Card.module.css'
-import { FaJava } from "react-icons/fa";
-import { FaPhp } from "react-icons/fa";
+import { FaJava , FaPhp , FaNode} from "react-icons/fa";
+//import { FaPhp } from "react-icons/fa";
 import { GrOracle } from "react-icons/gr";
 import { SiApache } from "react-icons/si";
 import { BsArrowRight } from "react-icons/bs";
+//import { FaNode } from "react-icons/fa";
 import { Link } from 'react-router-dom';
 
 // eslint-disable-next-line react/prop-types
@@ -14,6 +15,7 @@ function Card({name,description,html_url}) {
             <p>{description}</p>
             <div className={styles.card_footer}>
                 <div className={styles.card_icones}>
+                    <FaNode />
                     <FaJava />
                     <FaPhp />
                     <GrOracle />
